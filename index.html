@@ -4,10 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+}
+.topbar{
+    width:100%;
+    height:auto;
+    padding:20px 30px;
+    background: rgb(18,235,200);
+background: linear-gradient(90deg, rgba(18,235,200,1) 26%, rgba(16,107,231,1) 67%);
+    display:flex;
+    justify-content:space-between;
+    font-weight: bold;
+    font-size: x-large;
+}
+.navbar{
+    height:80px;
+    width:70%;
+    background-color:aliceblue;
+    margin:10px auto;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    color:black;
+    padding:10px 20px;
+    border-radius: 10px;
+}
+.menu{
+    display: flex;
+    justify-content:space-around;
+    gap:60px;
+    list-style: none;
+    font-size: larger;
+    
+}
+.logo{
+    font-size:xx-large;
+    font-weight: bolder;
+    font-family:'Times New Roman', Times, serif;
+}
+button{
+    font-size: larger;
+    background: rgb(18,235,200);
+    background: linear-gradient(90deg, rgba(18,235,200,1) 26%, rgba(16,107,231,1) 67%);
+    color:white;
+    border-radius: 10px;
+    padding:15px;
+
+}
+    </style>
 </head>
 <body>
+<div class="topbar">
+    <div class="leftside">
+        <p>
+            info@futuretouch.in
 
-    <h1>Hello Vashnavi</h1>
+
+|
+
+       futuretouch
+        </p>
+    </div>
+    <div class="rightside">
+      <p> Support
+        |
+        
+        Login
+        |
+        </p>
+    </div>
+</div>
+<div class="navbar">
+    <div class="logo">
+        Future Touch
+    </div>
+    <ul class="menu">
+        <li>Home</li>
+        <li>Menu</li>
+        <li>About</li>
+        <li>Services</li>
+    </ul>
+    <button>Request A Quote</button>
+</div>
+    
     
 </body>
 </html>
