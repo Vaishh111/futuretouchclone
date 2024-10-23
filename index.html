@@ -23,7 +23,11 @@ background: linear-gradient(90deg, rgba(18,235,200,1) 26%, rgba(16,107,231,1) 67
     justify-content:space-between;
     font-weight: bold;
     font-size: x-large;
+    color: aliceblue;
 }
+
+   
+
 .navbar{
     height:80px;
     width:70%;
@@ -58,6 +62,37 @@ button{
     padding:15px;
 
 }
+.menu{
+    display: flex;
+    justify-content: space-around;
+    gap:40px;
+    list-style: none;
+    position:relative;
+}
+.resmenu{
+    width:160px;
+    height:180px;
+    background-color: antiquewhite;
+    position:absolute;
+    top:-2000%;
+    left:150px;
+    transition: all .5s ease-in;
+    border-radius: 10px;
+    list-style: none;
+}
+.servmenu{
+    width:240px;
+    height:180px;
+    background-color: antiquewhite;
+    position:absolute;
+    top:-2000px;
+    left:230px;
+    transition: all .5s ease-in;
+    border-radius: 10px;
+    list-style: none;
+}
+
+
     </style>
 </head>
 <body>
@@ -65,21 +100,22 @@ button{
     <div class="leftside">
         <p>
             info@futuretouch.in
-
-
-|
-
+      
+          
+         |
        futuretouch
         </p>
     </div>
     <div class="rightside">
       <p> Support
         |
-        
         Login
         |
         </p>
     </div>
+</div>
+<div class="bgimg">
+    <p>hellooooo</p>
 </div>
 <div class="navbar">
     <div class="logo">
@@ -88,12 +124,66 @@ button{
     <ul class="menu">
         <li>Home</li>
         <li>Menu</li>
-        <li>About</li>
-        <li>Services</li>
+        <li id="aboutclick" onmouseenter="about()">About+</li>
+        <div class="resmenu" id="abtmenu">
+            <ul>
+              <li>  Why Us</li>
+              <li>  Our Team</li>
+              <li> Mission & Vision</li> 
+             <li> Our Portfolio</li>
+              <li> Our Pricing</li>
+          
+            </ul>
+          </div>
+        <li id="serviceclick" onmouseenter="services()">Services</li>
+        <div class="servmenu" id="servicemnu">
+            <ul>
+                <li>Website Design</li>
+                <li> Mobile App Development </li>
+                <li> Digital Marketing Service</li>
+                <li>Design & Branding</li>
+                    
+               
+            </ul>
+        </div>
+      
     </ul>
     <button>Request A Quote</button>
 </div>
-    
-    
+<script>
+      let first=document.getElementById(`aboutclick`)
+      let check=true;
+      console.log(check)
+      function about(){
+        if(check){
+            document.getElementById(`abtmenu`).style.top='40px'
+            check=false;
+            console.log(check)
+        }
+        else{
+            document.getElementById(`abtmenu`).style.top=`-2000%`
+            check=true;
+            console.log(check)
+        }
+
+      }
+
+      let second=document.getElementById(`serviceclick`)
+      let checked=true;
+      console.log(checked)
+      function services(){
+        if(checked){
+            document.getElementById(`servicemnu`).style.top='45px'
+            checked=false;
+            console.log(check)
+        }
+        else{
+            document.getElementById(`servicemnu`).style.top=`-2000px`
+            checked=true;
+            console.log(checked)
+        }
+      }
+
+</script>
 </body>
 </html>
